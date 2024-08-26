@@ -1,0 +1,49 @@
+1)
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("HELLO,WORLD");
+
+    return 0;
+}
+
+2)
+#include <stdio.h>
+
+int main() {
+    int A = 3;
+    int B = 5;
+    int sum = A+B;
+    // Write C code here
+    printf("%d",sum);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    float A = 3.1;
+    float B = 5.1;
+    float sum = A+B;
+    // Write C code here
+    printf("%f",sum);
+
+    return 0;
+}
+4)
+#include <stdio.h>
+
+int main() {
+    int num = 33;
+    if(num%2==0){
+        printf("it is an even number");
+    }else{
+        printf("it is an odd number");
+    }
+    // Write C code here
+    // printf("Try programiz.pro");
+
+    return 0;
+}
+
