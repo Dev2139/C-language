@@ -31,6 +31,24 @@ int main() {
 
     return 0;
 }
+3)
+#include <stdio.h>
+
+int main() {
+    int a = 2;
+    int b = 8;
+    int c = 5;
+    if(a >= b && a >= c){
+        printf("%d is the largest\n", a);
+        return a;
+    }else if(b >= c && b >= a){
+        printf("%d is the largest\n", b);
+        return b;
+    }else {
+        printf("%d is the largest\n", c);
+        return c;
+    }
+}
 4)
 #include <stdio.h>
 
@@ -44,6 +62,115 @@ int main() {
     // Write C code here
     // printf("Try programiz.pro");
 
+    return 0;
+}
+5)
+#include <stdio.h>
+
+int main() {
+    int myNum;
+    printf("enter a number:");
+    scanf("%d",&myNum);
+    int fact = 1;
+    for(int i=1;i<=myNum;i++){
+        fact*=i;
+    }printf("%d",fact);
+    return 0;
+}
+6)
+void reverseString(char* str) {
+    int i, j;
+    char temp;
+    for (i = 0, j = strlen(str) - 1; i < j; i++, j--) {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+    }
+}
+8)
+#include<stdio.h>
+
+int findMin(int arr[], int size) {
+    int min = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+int main(){
+    int arr[] = {3, 1, 4, 1, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int min = findMin(arr, size);
+    printf("The smallest number in the array is %d.\n", min);
+    return 0;
+}
+9)
+#include<stdio.h>
+
+void sortArray(int arr[], int size) {
+    int i, j, temp;
+    for (i = 0; i < size - 1; i++) {
+        for (j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main(){
+    int arr[] = {3, 1, 4, 1, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    sortArray(arr, size);
+    printf("Sorted array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+11)
+#include<stdio.h>
+
+int sumArray(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+int main(){
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int result = sumArray(arr, size);
+    printf("The sum of the array is: %d\n", result);
+    return 0;
+}
+12)
+#include<stdio.h>
+
+int isPrime(int num) {
+    if (num <= 1) {
+        return 0; // 0 and 1 are not prime
+    }
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            return 0; // num is divisible by i, so it's not prime
+        }
+    }
+    return 1; // num is prime
+}
+
+int main(){
+    int num = 7;
+    int result = isPrime(num);
+    printf("Is %d prime? %s\n", num, result ? "true" : "false");
     return 0;
 }
 
